@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 213 27% 84%;
+    --accent-foreground: 215 25% 27%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    /* Railway-specific design tokens */
+    --railway-blue: 217 91% 60%;
+    --railway-blue-dark: 217 91% 45%;
+    --railway-blue-light: 217 91% 75%;
+    --steel-gray: 215 16% 47%;
+    --steel-gray-light: 214 32% 91%;
+    --signal-orange: 25 95% 53%;
+    --safety-green: 142 76% 36%;
+    --warning-amber: 45 93% 47%;
+    --danger-red: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--railway-blue)), hsl(var(--railway-blue-dark)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--steel-gray-light) / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(var(--steel-gray-light) / 0.1));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--steel-gray) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--steel-gray) / 0.1), 0 2px 4px -1px hsl(var(--steel-gray) / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--steel-gray) / 0.1), 0 4px 6px -2px hsl(var(--steel-gray) / 0.05);
+    --shadow-railway: 0 8px 25px -5px hsl(var(--railway-blue) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 28% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 215 28% 17%;
+
+    --secondary: 215 16% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 16% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 16% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 16% 25%;
+    --input: 215 16% 25%;
+    --ring: 217 91% 60%;
+
+    /* Railway-specific dark mode colors */
+    --railway-blue: 217 91% 60%;
+    --railway-blue-dark: 217 91% 45%;
+    --railway-blue-light: 217 91% 75%;
+    --steel-gray: 215 20% 65%;
+    --steel-gray-light: 215 16% 25%;
+    --signal-orange: 25 95% 53%;
+    --safety-green: 142 76% 36%;
+    --warning-amber: 45 93% 47%;
+    --danger-red: 0 84% 60%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--railway-blue)), hsl(var(--railway-blue-dark)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--steel-gray-light) / 0.5));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--steel-gray-light) / 0.2));
+
+    --sidebar-background: 215 28% 17%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 215 28% 17%;
+    --sidebar-accent: 215 16% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 16% 25%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
